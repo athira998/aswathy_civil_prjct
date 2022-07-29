@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .e:hover{
+        background-color:gold;
+        color: black;
+    }
+    #a{
+        background-color: lightgrey;
+    }
+    #a:hover{
+        background-color: black;
+        color: white;
+    }
+    h1,h2{
+        font-family: 'Oswald', sans-serif;
+    }
+    .card-img-top{
+        width: 300px;
+        height:300px;
+        display: block;
+  
+    }
+    .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  background-color:lightcoral;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+    }
+    #con:hover .overlay {
+  width: 100%;
+  left: 0;
+}
+.text {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.img {
+  position: relative;
+  width: 50%;
+}
+
+.img-responsive1 {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay1 {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #f3f7f8;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+  
+}
+
+#img:hover .overlay1 {
+  bottom: 0;
+  height: 100%;
+}
+
+.text1 {
+  white-space: nowrap; 
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+  </style>
+
+
+
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>civil</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+
+
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <abbr title="Aster Hospital"><img src="{% static 'images/civillogo.png' %}" class="img-responsive" height="80px;" width="100px;"></abbr>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ">
+        <a class="nav-item nav-link text-white active " href="{% url 'homepage' %}"><b>HOME</b> <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link text-white" href="{% url 'civil_work' %}">CIVIL WORKS</a>
+        <a class="nav-item nav-link text-white" href="">CONSTRUCTION CHEMICALS</a>
+        <a class="nav-item nav-link text-white" href="">INTERNSHIP</a>
+        <a class="nav-item nav-link text-white" href="">WORK UPDATES</a>
+        <a class="nav-item nav-link text-white" href="">CONTACT</a>
+        <a class="nav-item nav-link text-white" href="">GALLARY</a>
+        <a class="nav-item nav-link text-white" href="">OUR PRODUCTS</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white">
+            :
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">OUR CLIENTS</a>
+            <a class="dropdown-item" href="#">CARRER</a>
+           
+          </div>
+        </li>
+    </div>
+  </div>
+</nav>
+<body>
+  
+
+    <div class="w3-container w3-pale-red w3-leftbar w3-rightbar w3-border-red w3-padding-32">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="{% static 'images/ca1.jpg' %}" alt="First slide" height="600px;">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3><b>ABOUT US</b></h5>
+                    <p><b>Home|About us</b></p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="{% static 'images/ca2.jpg' %}" alt="Second slide" height="600px;">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="{% static 'images/ca2.jpg' %}" alt="Third slide" height="600px;">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row a">
+      
+            <div class="col-6 ">
+                <h1 class="mt-5"><b>OUR MISSION & VISSION</b></h1>
+                <p class="mt-4 text-justify">Our motto is “We believe in quality not quantity“.<br><br> The success story of SQEC continues with a vision of state of art technology, hard work with dedicated and qualified teams having highly professional background, vision and innovative skills.</p>
+            </div>
+            <div class="col-6" id="img">
+                <img src="{% static 'images/moto.jpg' %}"class="img-responsive1" height="500px;"width="100%;">
+                <div class="overlay1">
+                    <div class="text1">Vission & Mission</div>
+                  </div>
+      
+            </div>
+      
+        </div>
+      </div>
+
+     
+      <div class="container mt-5" style="background-color:aqua ;">
+        <h1 style="text-align: center;color: black;"><b>we provide</b></h1>
+    
+    
+        <div class="row mt-5">
+          
+    
+            <div class="col-lg-3 col-md-4 col-sm-6 thumbnail text-dark">
+                <img src="{% static 'images/honesty.jpg' %}" class="img-fluid">
+                <h4 >TRUSTWORTHY
+                </h4>
+                <h6 class="text-center mt-4"><b></b></h6>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 thumbnail text-dark">
+                <img src="{% static 'images/best.jpg' %}" class="img-fluid">
+                <h4 > BEST QUALITY</h4>
+                <h6 class="text-center mt-4"><b></b></h6>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 thumbnail text-dark">
+                <img src="{% static 'images/truck.jpg' %}" class="img-fluid">
+                <h4 > ON TIME DELIVERY</h4>
+                <h6 class="text-center mt-4"><b></b></h6>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 thumbnail text-dark">
+                <img src="{% static 'images/durable.jpg' %}" class="img-fluid">
+                <h4 > DURABILITY IN WORK</h4>
+                <h6 class="text-center mt-4"><b></b></h6>
+            </div>
+        </div>
+       
+    </div>
+
+
+
+
+
+
+   
+    
+    
+    
+
+
+
+
+
+    <section class="gallery-block cards-gallery">
+      <div class="container">
+          <div >
+              <h1 class="text-center m-5 text-dark" ><b>Our Services</b></h1>
+              <h5 style="text-align:center ;"> </p>
+          </div>
+          <div class="row">
+              <div class="col-md-6 col-lg-4">
+                  <div class="card border-0 transform-on-hover" id="con">
+                      <a class="lightbox" href="img">
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfeU_H8lJw37DWDQqUUfrAmT6lIWdmI_friA&usqp=CAU" alt="image1" class="card-img-top" >
+                          <div class="overlay">
+                            <div class="text">civil work</div>
+                          </div>
+                      </a>
+                      <div class="card-body">
+                          <h2>Civil Works</h2>
+                          <p class="text-dark card-text text-justify">Excellent & Specialized Civil Works</p>
+                      </div>
+  
+                  </div>
+  
+              </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="card border-0 transform-on-hover" id="con">
+                      <a class="lightbox" href="img">
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOYslEON8oXjVP2qLb4YwvE3pWRfobuYXVYi-VyxWXuSWfgyc78W06NmZw5bk19gcj2VM&usqp=CAU" alt="image1" class="card-img-top" height="234px;">
+                          <div class="overlay">
+                            <div class="text">Archaeology & Heritage</div>
+                          </div>
+                      </a>
+                      <div class="card-body">
+                          <h2>Archaeology & Heritage</h2>
+                          <p class="text-dark card-text text-justify">Archaeological sites and heritages are part of our shared past. Protecting these physical validations of our past using various construction materials.</p>
+                      </div>
+  
+                  </div>
+  
+              </div>
+              <div class="col-md-6 col-lg-4">
+                  <div class="card border-0 transform-on-hover" id="con">
+                      <a class="lightbox" href="img">
+                          <img src="data:image/jpeg;base64,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" alt="image1" class="card-img-top" height="234px;" >
+                          <div class="overlay">
+                            <div class="text">Epoxy & 3D Flooring</div>
+                          </div>
+                        </a>
+                      <div class="card-body">
+                          <h2>Epoxy & 3D Flooring</h2>
+                          <p class="text-dark card-text text-justify">Self levelling epoxy floors in manufacturing buildings, warehouses, showrooms, kitchen, garages with 3D modelling.</p>
+                      </div>
+  
+                  </div>
+  
+              </div>
+              <div class="col-md-6 col-lg-4">
+                  <div class="card border-0 transform-on-hover" id="con">
+                      <a class="lightbox" href="img">
+                          <img src="https://inspirehome.in/images/ser9.jpg" alt="image1" class="card-img-top" height="234px;" >
+                          <div class="overlay">
+                            <div class="text">Landscaping Works</div>
+                          </div>
+                      </a>
+                      <div class="card-body">
+                          <h2>Landscaping Works</h2>
+                          <p class="text-dark card-text text-justify">Making of garden or other piece of land more attractive by altering the existing design adding ornamental features & planting trees & shrubs..</p>
+                      </div>
+  
+                  </div>
+  
+              </div>
+              <div class="col-md-6 col-lg-4">
+                  <div class="card border-0 transform-on-hover" id="con">
+                      <a class="lightbox" href="img">
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR62fNWyP2he6M8t675cQJPdtMuNq2MBx9E_Q&usqp=CAU" alt="image1" class="card-img-top" height="234px;" >
+                          <div class="overlay">
+                            <div class="text">Aluminum Fabrication</div>
+                          </div>
+                      </a>
+                      <div class="card-body">
+                          <h2>Aluminum Fabrication</h2>
+                          <p class="text-dark card-text text-justify">Providing aluminum frame boards partition work, doors & windows, structure glazing for enhancing the look & feel of establishments & offices.</p>
+                      </div>
+  
+                  </div>
+  
+              </div>
+              <div class="col-md-6 col-lg-4">
+                  <div class="card border-0 transform-on-hover" id="con">
+                      <a class="lightbox" href="img">
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9hf7Q8Al5hDToBFsT6xzAzLm9GTvxob8wFA&usqp=CAU" alt="image1" class="card-img-top" >
+                          <div class="overlay">
+                            <div class="text">Fencing Works</div>
+                          </div>
+                      </a>
+                      <div class="card-body">
+                          <h2>Fencing Works</h2>
+                          <p class="text-dark card-text text-justify"> Enclosing outdoor space without a solid foundation along the full length.</p>
+                      </div>
+  
+                  </div>
+  
+              </div>
+  
+          </div>
+      </div>
+  </section>
+ 
+  <div class="container mt-5"  >
+    <h1 style="text-align: center;" class="text-center m-5 text-light bg-info">Our Main Services</h1>
+    <p style="text-align:center ;" ><u>Services We Offer & Solutions</u></p>
+  <div class="row">
+
+            
+    <div class="col-lg-4 col-md-4 col-sm-6" style="padding-top: 30px;" id="a">
+        <h2><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+          </svg> Design and Build</h2>
+        <p class="mt-4 text-justify">How all this mistaken denouncing pleasure praising complete the work..</p>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-6 " style="padding-top: 30px;">
+        <h2><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-filter-square" viewBox="0 0 16 16">
+            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+            <path d="M6 11.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+          </svg>Management Work</h2>
+        <p class="mt-4 text-justify">Give you complete account of the system, and expound great opportunity..</p>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-6" style="padding-top: 30px;" id="a">
+        <h2> <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-building" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694 1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z"/>
+            <path d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z"/>
+          </svg>Construction Planning</h2>
+        <p class="mt-4 text-justify">Pleasure and praising pain was born and I will give complete Progresss.</p>
+    </div>
+
+
+</div>
+
+
+</div>
+
+<div class="container mt-5" >
+<div class="row">
+
+            
+    <div class="col-lg-4 col-md-4 col-sm-6" style="padding-top: 30px;">
+        <h2> <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-flower3" viewBox="0 0 16 16">
+            <path d="M11.424 8c.437-.052.811-.136 1.04-.268a2 2 0 0 0-2-3.464c-.229.132-.489.414-.752.767C9.886 4.63 10 4.264 10 4a2 2 0 1 0-4 0c0 .264.114.63.288 1.035-.263-.353-.523-.635-.752-.767a2 2 0 0 0-2 3.464c.229.132.603.216 1.04.268-.437.052-.811.136-1.04.268a2 2 0 1 0 2 3.464c.229-.132.489-.414.752-.767C6.114 11.37 6 11.736 6 12a2 2 0 1 0 4 0c0-.264-.114-.63-.288-1.035.263.353.523.635.752.767a2 2 0 1 0 2-3.464c-.229-.132-.603-.216-1.04-.268zM9 4a1.468 1.468 0 0 1-.045.205c-.039.132-.1.295-.183.484a12.88 12.88 0 0 1-.637 1.223L8 6.142a21.73 21.73 0 0 1-.135-.23 12.88 12.88 0 0 1-.637-1.223 4.216 4.216 0 0 1-.183-.484A1.473 1.473 0 0 1 7 4a1 1 0 1 1 2 0zM3.67 5.5a1 1 0 0 1 1.366-.366 1.472 1.472 0 0 1 .156.142c.094.1.204.233.326.4.245.333.502.747.742 1.163l.13.232a21.86 21.86 0 0 1-.265.002 12.88 12.88 0 0 1-1.379-.06 4.214 4.214 0 0 1-.51-.083 1.47 1.47 0 0 1-.2-.064A1 1 0 0 1 3.67 5.5zm1.366 5.366a1 1 0 0 1-1-1.732c.001 0 .016-.008.047-.02.037-.013.087-.028.153-.044.134-.032.305-.06.51-.083a12.88 12.88 0 0 1 1.379-.06c.09 0 .178 0 .266.002a21.82 21.82 0 0 1-.131.232c-.24.416-.497.83-.742 1.163a4.1 4.1 0 0 1-.327.4 1.483 1.483 0 0 1-.155.142zM9 12a1 1 0 0 1-2 0 1.476 1.476 0 0 1 .045-.206c.039-.131.1-.294.183-.483.166-.378.396-.808.637-1.223L8 9.858l.135.23c.241.415.47.845.637 1.223.083.19.144.352.183.484A1.338 1.338 0 0 1 9 12zm3.33-6.5a1 1 0 0 1-.366 1.366 1.478 1.478 0 0 1-.2.064c-.134.032-.305.06-.51.083-.412.045-.898.061-1.379.06-.09 0-.178 0-.266-.002l.131-.232c.24-.416.497-.83.742-1.163a4.1 4.1 0 0 1 .327-.4c.046-.05.085-.086.114-.11.026-.022.04-.03.041-.032a1 1 0 0 1 1.366.366zm-1.366 5.366a1.494 1.494 0 0 1-.155-.141 4.225 4.225 0 0 1-.327-.4A12.88 12.88 0 0 1 9.74 9.16a22 22 0 0 1-.13-.232l.265-.002c.48-.001.967.015 1.379.06.205.023.376.051.51.083.066.016.116.031.153.044l.048.02a1 1 0 1 1-1 1.732zM8 9a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+          </svg>  Green Building</h2>
+        <p class="mt-4 text-justify"> Expound the actual teaching of the great pleasure work in the Company.</p>
+
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-6" style="padding-top: 30px;" id="a">
+        <h2> <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+            <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
+          </svg>Interior Design </h2>
+        <p class="mt-4 text-justify">Encounter conseqce that ut pleasure extremely painful again lets create Design.</p>
+
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-6" style="padding-top: 30px;">
+        <h2><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+            <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+          </svg>Concrete Transport</h2>
+        <p class="mt-4 text-justify">Undertaks laborius physical except obtain some advantage for your work.</p>
+
+    </div>
+    </div>
+
+
+</div>
+
+
+</div>
+
+
+  <div class="container-fluid mt-5 text-center bg-dark">
+    <h3 style="color:white ;">Connect With Us</h3>
+     <p class="mt-5"><i class="fab fa-pinterest text-info" style="font-size:3em;"></i>  <i class="fab fa-facebook text-primary" style="font-size:3em;"></i>  <i class="fab fa-instagram-square text-primary" style="font-size:3em;"></i>   <i class="fab fa-twitter-square text-primary" style="font-size:3em;"></i>   <i class="fab fa-whatsapp-square text-success" style="font-size:3em;"></i></p>
+     <p class="text-center text-light mt-4" ><b>Toll free No: 1-800-425-4747 (Within India only)<br>
+Department of Health, Government of Kerala, Park View, Kozhikode, Kerala, India - 695 033<br>
+Phone: +91 471 2321132, Fax: +91 471 2322279, E-mail: asrer@healthcare.org.<br>
+All rights reserved © Kerala Health Department 2022.<br> Copyright | Terms of Use | Cookie Policy | Contact Us.<br>
+         Developed & Maintained by Invis Multimedia.</b></p>
+
+
+</div>
+
+
+  
+
+
+
+
+
+
+</body>
+</html>

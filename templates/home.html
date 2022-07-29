@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .a:hover{
+    background-color: gray;
+    color: white;
+    }
+    .b:hover{
+      height: 400px;
+      width: 400px;
+    }
+    .c:hover{
+      background-color: black;
+      color: white;
+    }
+    .d:hover{
+      background-color: goldenrod;
+      color: azure;
+    }
+    h1,h2{
+        font-family: 'Oswald', sans-serif;
+    }
+   .card-img-top{
+     opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+   }
+   .middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+#c:hover .card-img-top {
+  opacity: 0.3;
+}
+
+#c:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+  </style>
+
+
+
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>civil</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+
+
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <abbr title="Aster Hospital"><img src="{% static 'images/civillogo.png' %}" class="img-responsive" height="80px;" width="100px;"></abbr>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ">
+      <a class="nav-item nav-link text-white active " href=""><b>HOME</b> <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link text-white" href="{% url 'civil_work' %}">CIVIL WORKS</a>
+      <a class="nav-item nav-link text-white" href="">CONSTRUCTION CHEMICALS</a>
+      <a class="nav-item nav-link text-white" href="">INTERNSHIP</a>
+      <a class="nav-item nav-link text-white" href="">WORK UPDATES</a>
+      <a class="nav-item nav-link text-white" href="">CONTACT</a>
+      <a class="nav-item nav-link text-white" href="">GALLARY</a>
+      <a class="nav-item nav-link text-white" href="">OUR PRODUCTS</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white">
+          :
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">OUR CLIENTS</a>
+          <a class="dropdown-item" href="#">CARRER</a>
+         
+        </div>
+      </li>
+
+    </div>
+  </div>
+</nav>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="https://danslacuisinededede.com/constructo/images/main-slider/image-3.jpg" alt="First slide" height="600px;">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://danslacuisinededede.com/constructo/images/main-slider/image-6.jpg" alt="Second slide" height="600px">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://danslacuisinededede.com/constructo/images/main-slider/image-7.jpg" alt="Third slide" height="600px;">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div class="container mt-5">
+  <div class="row a">
+
+      <div class="col-6 ">
+          <h1 class="mt-5"><b>36 Years OF
+            Success
+            Work</b></h1>
+          <p class="mt-4 text-justify">"SQ Engineering Contractors Pvt Ltd. a world class civil engineering and construction company established in 
+            2009 at Cochin, Kerala, India with more than 12 years of experience in a wide range of sectors including
+            construction, sales etc. dealing with clients all over in the world. The success story of SQEC continues
+            with a vision of state of art technology, hard work with dedicated and qualified teams having highly
+            professional background, vision and innovative skills. SQ Engineering Contractors in Kakkanad Ernakulam is
+            a top player in the category of Construction Companies in the Ernakulam. Over the course of our journey, this
+            business has established a firm foothold in it’s industry." </p>
+          
+      </div>
+      <div class="col-6">
+          <img src="https://danslacuisinededede.com/constructo/images/resource/services-1.jpg"class="img-responsive" height="500px;"width="100%;">
+
+      </div>
+
+  </div>
+</div>
+<section class="gallery-block cards-gallery">
+    <div class="container">
+        <div >
+            <h2 class="text-center m-5 text-light bg-info" ><b>Our Dedicated Team</b></h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 transform-on-hover" id="c">
+                    <a class="lightbox" href="img">
+                        <img src="https://danslacuisinededede.com/constructo/images/resource/team-1.png" alt="image1" class="card-img-top" >
+                        <div class="middle">
+                            <div class="text">Jeniffer Burns</div>
+                          </div>
+                    </a>
+                    <div class="card-body">
+                        <h6 style="color: black;"><b>Jeniffer Burns</b></h6>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card border-0 transform-on-hover" id="c">
+                    <a class="lightbox" href="img">
+                        <img src="https://danslacuisinededede.com/constructo/images/resource/team-2.png" alt="image1" class="card-img-top" >
+                        <div class="middle">
+                            <div class="text">Christian Perry</div>
+                          </div>
+                    </a>
+                    <div class="card-body">
+                        <h6 style="color: black;"><b>Christian Perry</b></h6>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 transform-on-hover" id="c">
+                    <a class="lightbox" href="img">
+                        <img src="https://danslacuisinededede.com/constructo/images/resource/team-3.png" alt="image1" class="card-img-top"  >
+                        <div class="middle">
+                            <div class="text">Aimee Devlin</div>
+                          </div>
+                    </a>
+                    <div class="card-body">
+                        <h6 style="color: black;"><b>Aimee Devlin</b></h6>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+            </div>
+            </div>
+            </section>
+
+            
+    <section class="gallery-block cards-gallery">
+        <div class="container">
+            <div >
+                <h1 class="text-center m-5 text-dark" ><b>
+                    Our Best Works &
+                    Our Recent Projects
+                    </b></h1>
+                <h5 style="text-align:center ;">Well we’re movin’ on up to the east side. To a deluxe apartment in the sky. The weather started getting rough – the tiny ship was tossed. If not for the courage of the fearless crew the Minnow would be lost. the Minnow would be lost. We’re gonna do it. </p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 transform-on-hover" id="c">
+                        <a class="lightbox" href="img">
+                            <img src="data:image/jpeg;base64,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" alt="image1" class="card-img-top" >
+                            <div class="middle">
+                                <div class="text">Our Projects</div>
+                              </div>
+                        </a>
+                        <div class="card-body">
+                            
+                            <p class="text-dark card-text text-justify">That is the way we all be came the Brady Bunch these to days are all Happy and Free .</p>
+                        </div>
+    
+                    </div>
+    
+                </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 transform-on-hover" id="c">
+                        <a class="lightbox" href="img">
+                            <img src="https://jiet-edu.co.za/edu/wp-content/uploads/2020/10/IMG_0894-scaled.jpg" alt="image1" class="card-img-top" height="80px;">
+                            <div class="middle">
+                                <div class="text">Our Projects</div>
+                              </div>
+                        </a>
+                        <div class="card-body">
+                            
+                            <p class="text-dark card-text text-justify">That is the way we all be came the Brady Bunch these to days are all Happy and Free .</p>
+                        </div>
+    
+                    </div>
+    
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 transform-on-hover" id="c">
+                        <a class="lightbox" href="img">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzmVP2qLZKFNJOkNbUzKpHTqzknxqm5yz-zt0Loww01-dLSmzxLMPMjPyZQ0uY6c0AKOI&usqp=CAU" alt="image1" class="card-img-top" height="260px;" >
+                            <div class="middle">
+                                <div class="text">Our Projects</div>
+                              </div>
+                        </a>
+                        <div class="card-body">
+                            
+                            <p class="text-dark card-text text-justify">That is the way we all be came the Brady Bunch these to days are all Happy and Free.</p>
+                        </div>
+    
+                    </div>
+    
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 transform-on-hover" id="c">
+                        <a class="lightbox" href="img">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJncQJfP16lxSHmIFbwgh3mo_T-Zu3hhGjcw&usqp=CAU" alt="image1" class="card-img-top" height="234px;" >
+                            <div class="middle">
+                                <div class="text">Our Projects</div>
+                              </div>
+                        </a>
+                        <div class="card-body">
+                            
+                            <p class="text-dark card-text text-justify">That is the way we all be came the Brady Bunch these to days are all Happy and Free .</p>
+                        </div>
+    
+                    </div>
+    
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 transform-on-hover" id="c">
+                        <a class="lightbox" href="img">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv2hosAzLaPB6DXg1ovFixmJaTV4_ODs7BQQ&usqp=CAU" alt="image1" class="card-img-top" height="234px;" >
+                            <div class="middle">
+                                <div class="text">Our Projects</div>
+                              </div>
+                        </a>
+                        <div class="card-body">
+                            
+                            <p class="text-dark card-text text-justify">That is the way we all be came the Brady Bunch these to days are all Happy and Free .</p>
+                        </div>
+    
+                    </div>
+    
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 transform-on-hover" id="c">
+                        <a class="lightbox" href="img">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBFYjiRs5FUyBPPG7mZytM8SnqOaDny0mNRQ&usqp=CAU" alt="image1" class="card-img-top" >
+                            <div class="middle">
+                                <div class="text">Our Projects</div>
+                              </div>
+                        </a>
+                        <div class="card-body">
+                            
+                            <p class="text-dark card-text text-justify"> That is the way we all be came the Brady Bunch these to days are all Happy and Free .</p>
+                        </div>
+    
+                    </div>
+    
+                </div>
+    
+            </div>
+        </div>
+    </section>
+  
+
+
+
+
+
+
+
+<div class="container-fluid mt-5 text-center bg-dark">
+    <h3 style="color:white ;">Connect With Us</h3>
+     <p class="mt-5"><i class="fab fa-pinterest text-info" style="font-size:3em;"></i>  <i class="fab fa-facebook text-primary" style="font-size:3em;"></i>  <i class="fab fa-instagram-square text-primary" style="font-size:3em;"></i>   <i class="fab fa-twitter-square text-primary" style="font-size:3em;"></i>   <i class="fab fa-whatsapp-square text-success" style="font-size:3em;"></i></p>
+     <p class="text-center text-light mt-4" ><b>Toll free No: 1-800-425-4747 (Within India only)<br>
+        SQ Engineering Contractors P Ltd., XI/105-C1, Civil Lane Road, Kochi<br>
+Phone: +91 471 2321132, Fax: +91 471 2322279, E-mail: sqenquiry2021@gmail.com<br>
+All rights reserved © Kerala civil Department 2022.<br> Copyright | Terms of Use | Cookie Policy | Contact Us.<br>
+         Developed & Maintained by Invis Multimedia.</b></p>
+
+
+</div>
+
+
+
+
+
+</body>
+</html>
